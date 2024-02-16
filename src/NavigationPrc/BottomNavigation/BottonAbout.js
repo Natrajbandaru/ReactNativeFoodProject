@@ -1,11 +1,10 @@
 import React from "react";
 import { StyleSheet,View, Text,StatusBar,Button } from "react-native";
-
-export default Home=({navigation})=>{
+import StackMainPage from "../StackNavigation/StackMainPage";
+export default BottomAbout=({navigation})=>{
     return(
         <View style={styles.container}>
-            <Button title="Go Home" onPress={()=>navigation.navigate("ItemsScreen")}/>
-            <Text style={styles.text}>Home</Text>
+            <Text style={styles.text}>BottomAbout</Text>
         </View>
     )
 }

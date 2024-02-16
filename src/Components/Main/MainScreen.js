@@ -1,15 +1,18 @@
 import React from "react";
 import { StyleSheet,View, Text,StatusBar,Button } from "react-native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Home from "../Home";
+import About from "../About";
 
-export default Home=({navigation})=>{
+export default ItemsScreen=()=>{
+    const Bottom = createBottomTabNavigator();
     return(
-        <View style={styles.container}>
-            <Button title="Go Home" onPress={()=>navigation.navigate("ItemsScreen")}/>
-            <Text style={styles.text}>Home</Text>
-        </View>
+       <Bottom.Navigator>
+           <Bottom.Screen name="Home"  component={Home}/>
+           <Bottom.Screen name="About" component={About}/>
+       </Bottom.Navigator>
     )
 }
-
 const styles= StyleSheet.create({
     container :{
         flex:1,

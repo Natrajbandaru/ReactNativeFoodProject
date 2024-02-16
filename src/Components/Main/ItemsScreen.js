@@ -1,15 +1,12 @@
 import React from "react";
 import { StyleSheet,View, Text,StatusBar,Button } from "react-native";
-
-export default Home=({navigation})=>{
+export default ItemsScreen=()=>{
     return(
         <View style={styles.container}>
-            <Button title="Go Home" onPress={()=>navigation.navigate("ItemsScreen")}/>
-            <Text style={styles.text}>Home</Text>
+            <Text style={styles.text}>ItemsScreen</Text>
         </View>
     )
 }
-
 const styles= StyleSheet.create({
     container :{
         flex:1,

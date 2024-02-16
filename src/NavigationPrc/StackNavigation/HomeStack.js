@@ -1,11 +1,9 @@
 import React from "react";
-import { StyleSheet,View, Text,StatusBar,Button } from "react-native";
-export default About=()=>{
-    return(
-        <View style={styles.container}>
-            <Text style={styles.text}>About</Text>
-        </View>
-    )
+import { StyleSheet,View, Text ,StatusBar, Button} from "react-native";
+import BottomMainNavigation from "../BottomNavigation/BottomMainNavigation";
+export default HomeStcak=()=>{
+    return <BottomMainNavigation/>;
+    
 }
 
 const styles= StyleSheet.create({
@@ -14,7 +12,7 @@ const styles= StyleSheet.create({
         backgroundColor:"#f5f5f5",
         paddingTop:StatusBar.currentHeight,
         alignItems:"center",
-        justifyContent:"center"
+        justifyContent:"flex-end"
     },
     text:{
         fontSize:24,
