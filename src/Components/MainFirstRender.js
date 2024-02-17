@@ -18,7 +18,6 @@ export default MainNavigationPrc =()=>{
                         // headerStyle:{
                         //       backgroundColor:"red",   
                         // },
-                        
                         headerSearchBarOptions: () => (
                               <TextInput
                                 style={{ backgroundColor: 'white', padding: 10,borderWidth:2,width:200,height:40,flexDirection:"row" }}

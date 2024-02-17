@@ -1,1 +1,27 @@
 -> Status Bar is Used for hight above
+
+Installations 
+npm i @react-native-community/blur
+npm i react-native-vector-icons
+npm i lottie-react-native
+
+
+=>//For Bluer Effect
+npm i @react-native-community/blur
+import {BlurView} from '@react-native-community/blur';
+https://www.npmjs.com/package/@react-native-community/blur
+
+=>//For icons
+npm i react-native-vector-icons
+import {createIconSetFromIcoMoon} from 'react-native-vector-icons';
+https://www.npmjs.com/package/react-native-vector-icons?activeTab=dependents
+
+
+=>//For Annimations
+npm i lottie-react-native
+https://www.npmjs.com/package/lottie-react-native
+
+
+
+
+

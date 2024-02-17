@@ -1,9 +1,11 @@
 import React from "react";
 import { StyleSheet,View, Text,StatusBar,Button } from "react-native";
-export default About=()=>{
+
+export default Money=({navigation})=>{
     return(
         <View style={styles.container}>
-            <Text style={styles.text}>About</Text>
+            <Button title="Go Home" onPress={()=>navigation.navigate("ItemsScreen")}/>
+            <Text style={styles.text}>Money</Text>
         </View>
     )
 }
