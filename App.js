@@ -1,12 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native';
 //import MainNavigationPrc from './src/NavigationPrc/MainNavigationPrc';
-import MainFirstRender from './src/Components/Main/MainFirstRender';
+import MainFirstRender from './src/Components/MainFirstRender';
 export default function App() {
   return (
     // <MainPage/>
        <MainFirstRender/>
     // <AppNavigator/>
-
   );
 }
 

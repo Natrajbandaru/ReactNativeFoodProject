@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet,View, Text,StatusBar,Button } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "../Home";
-import About from "../About";
+import Home from "../BottomNavigation/Home";
+import About from "../BottomNavigation/About";
 
 export default ItemsScreen=()=>{
     const Bottom = createBottomTabNavigator();
