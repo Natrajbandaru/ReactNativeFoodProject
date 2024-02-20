@@ -1,9 +1,10 @@
 import React from "react";
-import { StyleSheet,View, Text,StatusBar,Button, ScrollView, TextInput, TouchableOpacity } from "react-native";
+import { StyleSheet,View, Text,StatusBar,Button, ScrollView,Image, TextInput, TouchableOpacity, FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from 'react-native-vector-icons/FontAwesome';
-
+import ListOfMind from "../ListOfMind";
 export default Delevery=()=>{
+    alert(ListOfMind)
     return(
         <SafeAreaView style={styles.container}>
             <ScrollView>
@@ -43,15 +44,47 @@ export default Delevery=()=>{
                         </TouchableOpacity>
                     </View>
                 </View>
-                <View>
-                    <Text>EXPLORE</Text>
+                <View style={styles.exp}>
+                    <View style={styles.line} />
+                    <Text  style={styles.expText}>EXPLORE</Text>
+                    <View style={styles.line} />
+
                 </View>
-                <View>
-                    <View>
-                         <Text>Top 10 Restarents</Text>
+                <View style={styles.expBannerCon}>
+                    <View style={styles.expBannerCol}>
+                         <Text style={styles.banMainHead}>Top 10 Restarents</Text>
+                         <Text style={styles.banMaitext}>Discover the best local resterant near you</Text>
                     </View>
                     <View>
-                         <Text>Discover the best local resterant near you</Text>
+                         <Icon name="star" size={20} color="gold"><Icon name="star" size={70}/><Icon name="star" size={40}/></Icon>
+                    </View>
+                </View>
+                <View style={styles.exp}>
+                        <View style={styles.line}></View>
+                        <Text style={styles.expText}>WHAT'S ON YOUR MIND?</Text>
+                        <View style={styles.line}></View>
+                </View>
+                <View style={styles.mindCon}>
+                    <View>
+                        <FlatList data={ListOfMind} 
+                       renderItem={({item})=>{
+                        console.log(item.id)
+                        const s=item.path;
+                        if(s==="../../../assets/Photos/food3.jpg"){
+                            alert("true")
+                        }
+                        alert(s)
+                        return(
+                          <View  key={item.id}>
+                             <Text >{item.name}</Text>
+                             {/* <Image  source={require(s)}/> */}
+                           </View>
+                        );
+                      }}
+                        
+                        >
+
+                        </FlatList>
                     </View>
                 </View>
             </ScrollView>
@@ -59,12 +92,13 @@ export default Delevery=()=>{
     )
 }
 
-const styles= StyleSheet.create({
+const styles = StyleSheet.create({
+   
     container :{
         flex:1,
         backgroundColor:"#f5f5f5",
-        margin:10
-       // paddingTop:StatusBar.currentHeight,
+        margin:10,
+        // paddingTop:StatusBar.currentHeight,
     },
     text:{
         fontSize:24,
@@ -149,8 +183,7 @@ const styles= StyleSheet.create({
     },
     advContainer:{
         flex:1,
-        borderWidth:0.2,
-        borderRadius:2,
+        borderRadius:5,
         backgroundColor:"white",
         marginTop:10,
         marginBottom:5,
@@ -207,6 +240,80 @@ const styles= StyleSheet.create({
     buttext:{
         color:"white",
         fontSize:15
+    },
+    exp:{
+        marginTop:30,
+        alignItems:"center",
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    line: {
+        flex: 1,
+        backgroundColor:'gainsboro',
+        borderWidth:0.1,
+      },
+    expText:{
+        fontSize:13,
+        color:"grey",
+        marginLeft:15,
+        marginRight:15
+    },
+    expBannerCon:{
+        flex:1,
+        flexDirection:"row",
+        backgroundColor:"white",
+        marginTop:5,
+        marginBottom:5,
+        alignItems:"center",
+        padding:2,
+        height:50,
+        borderRadius:10,
+        shadowColor: 'black',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.25,
+        shadowRadius: 5,
+        elevation: 3, 
+        justifyContent:"space-around",
+        padding:10,
+        height:100
+    },
+    expBannerCol:{
+       flex:1,
+       flexDirection:"column",
+       justifyContent:"space-between"
+    },
+    banMainHead:{
+        fontWeight:"bold",
+        fontSize:20,
+    },
+    banMaitext:{
+        width:150,
+        color:"grey"
+    },
+    mindCon:{
+        backgroundColor:"white",
+        marginTop:5,
+        marginBottom:5,
+        padding:2,
+        borderRadius:10,
+        shadowColor: 'black',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.25,
+        shadowRadius: 5,
+        elevation: 3, 
+        padding:10,
+    },
+    mindCon1:{
+        flex:1,
+        flexDirection:"row",
+
     }
+        
+
+        
+        
+
+    
 
 })

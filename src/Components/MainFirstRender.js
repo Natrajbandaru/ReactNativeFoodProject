@@ -9,6 +9,7 @@ import { Text, TextInput } from 'react-native';
 
 export default MainNavigationPrc =()=>{
     const Stack = createNativeStackNavigator();
+    const s=require("../../assets/Photos/food1.jpg")
     return(
           <NavigationContainer options={{
         
