@@ -3,8 +3,11 @@ import { StyleSheet,View, Text,StatusBar,Button, ScrollView,Image, TextInput, To
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ListOfMind from "../ListOfMind";
+import ListOfMind2 from "../ListOfMind2";
+
+import FlatListData from "./FlatList";
+
 export default Delevery=()=>{
-    alert(ListOfMind)
     return(
         <SafeAreaView style={styles.container}>
             <ScrollView>
@@ -48,7 +51,6 @@ export default Delevery=()=>{
                     <View style={styles.line} />
                     <Text  style={styles.expText}>EXPLORE</Text>
                     <View style={styles.line} />
-
                 </View>
                 <View style={styles.expBannerCon}>
                     <View style={styles.expBannerCol}>
@@ -65,40 +67,72 @@ export default Delevery=()=>{
                         <View style={styles.line}></View>
                 </View>
                 <View style={styles.mindCon}>
-                    <View>
-                        <FlatList data={ListOfMind} 
-                       renderItem={({item})=>{
-                        console.log(item.id)
-                        const s=item.path;
-                        if(s==="../../../assets/Photos/food3.jpg"){
-                            alert("true")
-                        }
-                        alert(s)
-                        return(
-                          <View  key={item.id}>
-                             <Text >{item.name}</Text>
-                             {/* <Image  source={require(s)}/> */}
-                           </View>
-                        );
-                      }}
-                        
-                        >
-
+                         <FlatList data={ListOfMind} 
+                            renderItem={({item})=>{
+                                    return(
+                                    <View style={styles.viewimgCon}>
+                                        <Image source={item.image} style={styles.img} />
+                                        <Text>{item.name}</Text>
+                                      </View>
+                                    );
+                            }}
+                            horizontal={true}
+                            ItemSeparatorComponent={<View style={{height:100,width:20}}></View>}
+                            scrollEnabled={true}
+                         >
                         </FlatList>
-                    </View>
+                        <FlatList data={ListOfMind} 
+                            renderItem={({item})=>{
+                                    return(
+                                    <View style={styles.viewimgCon}>
+                                        <Image source={item.image} style={styles.img} />
+                                        <Text>{item.name}</Text>
+                                      </View>
+                                    );
+                            }}
+                            horizontal={true}
+                            ItemSeparatorComponent={<View style={{height:100,width:20}}></View>}
+                            scrollEnabled={true}
+                         >
+                        </FlatList>
+
+                     
+
                 </View>
             </ScrollView>
+            
         </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
-   
+    cont:{
+        flex:1,
+        flexDirection:"row"
+    },
+    mindCon:{
+         backgroundColor:"white",
+       
+    },
+    
+    img:{
+        width:90,
+        height:90,
+        borderRadius:100
+    },
+    viewimgCon:{
+        padding: 10,
+        backgroundColor: "white",
+        margin: 5 
+    },
+
+
+
     container :{
         flex:1,
         backgroundColor:"#f5f5f5",
         margin:10,
-        // paddingTop:StatusBar.currentHeight,
+       // paddingTop:StatusBar.currentHeight,
     },
     text:{
         fontSize:24,
@@ -290,29 +324,7 @@ const styles = StyleSheet.create({
     banMaitext:{
         width:150,
         color:"grey"
-    },
-    mindCon:{
-        backgroundColor:"white",
-        marginTop:5,
-        marginBottom:5,
-        padding:2,
-        borderRadius:10,
-        shadowColor: 'black',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.25,
-        shadowRadius: 5,
-        elevation: 3, 
-        padding:10,
-    },
-    mindCon1:{
-        flex:1,
-        flexDirection:"row",
-
     }
-        
-
-        
-        
 
     
 
