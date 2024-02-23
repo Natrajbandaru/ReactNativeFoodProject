@@ -10,7 +10,7 @@ import FlatListData from "./FlatList";
 export default Delevery=()=>{
     return(
         <SafeAreaView style={styles.container}>
-            <ScrollView>
+            <ScrollView        showsVerticalScrollIndicator={false}>
                 <View style={styles.placeContainer}>
                        <Icon name="location-arrow" size={25} color="red" style={{marginLeft:"1%",marginRight:"2%"}}/>
                         <View style={styles.locationCon}>
@@ -66,68 +66,93 @@ export default Delevery=()=>{
                         <Text style={styles.expText}>WHAT'S ON YOUR MIND?</Text>
                         <View style={styles.line}></View>
                 </View>
+             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
                 <View style={styles.mindCon}>
                          <FlatList data={ListOfMind} 
                             renderItem={({item})=>{
                                     return(
                                     <View style={styles.viewimgCon}>
                                         <Image source={item.image} style={styles.img} />
-                                        <Text>{item.name}</Text>
+                                        <Text style={styles.name}>{item.name}</Text>
                                       </View>
                                     );
                             }}
                             horizontal={true}
                             ItemSeparatorComponent={<View style={{height:100,width:20}}></View>}
-                            scrollEnabled={true}
+                            scrollEnabled={false}
                          >
                         </FlatList>
-                        <FlatList data={ListOfMind} 
+                        <FlatList data={ListOfMind2} 
                             renderItem={({item})=>{
                                     return(
                                     <View style={styles.viewimgCon}>
                                         <Image source={item.image} style={styles.img} />
-                                        <Text>{item.name}</Text>
+                                        <Text style={styles.name}>{item.name}</Text>
                                       </View>
                                     );
                             }}
                             horizontal={true}
                             ItemSeparatorComponent={<View style={{height:100,width:20}}></View>}
-                            scrollEnabled={true}
+                            scrollEnabled={false}
                          >
                         </FlatList>
-
-                     
-
                 </View>
+             </ScrollView>
+             <View style={styles.exp}>
+                        <View style={styles.line}></View>
+                        <Text style={styles.expText}>ALL RESTAURANTS</Text>
+                        <View style={styles.line}></View>
+             </View>
+             <View style={{marginTop:8}}>
+                <ScrollView horizontal={true}  showsHorizontalScrollIndicator={false}>
+                    <TouchableOpacity style={styles.restarentbtn}>
+                        <Icon name="sort" size={15}/>
+                        <Text  style={styles.sortName}>Sort</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.restarentbtn}>
+                        <Text  style={styles.sortName}>Nearest</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.restarentbtn}>
+                        <Text  style={styles.sortName}>Great Offer</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.restarentbtn}>
+                        <Text  style={styles.sortName}>Rating 4.0+</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.restarentbtn}>
+                        <Text  style={styles.sortName}>Coupens</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.restarentbtn}>
+                        <Text  style={styles.sortName}>ReNew</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.restarentbtn}>
+                        <Text  style={styles.sortName}>New Items</Text>
+                    </TouchableOpacity>
+                </ScrollView>
+             </View>
             </ScrollView>
-            
         </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
-    cont:{
-        flex:1,
-        flexDirection:"row"
+    restarentbtn:{
+        backgroundColor:"white",
+        elivation:2,
+        width:100,
+        height:33,
+        alignItems:"center",
+        justifyContent:"space-evenly",
+        flexDirection:"row",
+        borderRadius:8,
+        shadowColor:"black",
+        shadowRadius:10,
+        shadowOpacity:0.6,
+        margin:4
     },
-    mindCon:{
-         backgroundColor:"white",
-       
+    sortName:{
+      fontSize:15,
+      fontWeight:"400"
     },
-    
-    img:{
-        width:90,
-        height:90,
-        borderRadius:100
-    },
-    viewimgCon:{
-        padding: 10,
-        backgroundColor: "white",
-        margin: 5 
-    },
-
-
-
     container :{
         flex:1,
         backgroundColor:"#f5f5f5",
@@ -324,7 +349,33 @@ const styles = StyleSheet.create({
     banMaitext:{
         width:150,
         color:"grey"
-    }
+    },
+    cont:{
+        flex:1,
+        flexDirection:"row"
+    },
+    mindCon:{
+         backgroundColor:"white",
+         scrollEnabled:true,
+         marginTop:10
+       
+    },
+    img:{
+        width:90,
+        height:90,
+        borderRadius:100
+    },
+    viewimgCon:{
+        padding: 10,
+        backgroundColor: "white",
+        margin: 5 ,
+        flex:1,
+        alignItems:"center"
+    },
+    name:{
+        marginTop:10,
+        color:"grey"
+    },
 
     
 
