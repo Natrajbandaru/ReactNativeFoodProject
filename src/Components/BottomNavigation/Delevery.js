@@ -4,9 +4,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ListOfMind from "../ListOfMind";
 import ListOfMind2 from "../ListOfMind2";
-
 import FlatListData from "./FlatList";
-
+import CardData from "../CardData";
 export default Delevery=()=>{
     return(
         <SafeAreaView style={styles.container}>
@@ -129,6 +128,8 @@ export default Delevery=()=>{
                     </TouchableOpacity>
                 </ScrollView>
              </View>
+             <CardData/>
+             
             </ScrollView>
         </SafeAreaView>
     )
