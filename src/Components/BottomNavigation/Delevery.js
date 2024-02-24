@@ -128,7 +128,9 @@ export default Delevery=()=>{
                     </TouchableOpacity>
                 </ScrollView>
              </View>
-             <CardData/>
+             <View style={{marginTop:10}}>
+                 <CardData/>
+             </View>
              
             </ScrollView>
         </SafeAreaView>
