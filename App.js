@@ -5,11 +5,11 @@ export default function App() {
   return (
     // <MainPage/>
 
-      //  <MainFirstRender/>
+        <MainFirstRender/>
     // <AppNavigator/>
-    <View style={styles.container}>
-    <Text style={styles.text}>Hello, world!</Text>
-  </View>
+  //   <View style={styles.container}>
+  //   <Text style={styles.text}>Hello, world!</Text>
+  // </View>
   );
 }
 

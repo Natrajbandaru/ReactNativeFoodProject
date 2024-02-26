@@ -1,31 +1,31 @@
 export default ListOfmind2=        [
     {
-        name:"pizza",
-        image:require("../../assets/Photos/food4.jpg"),
+        name:"Chicken",
+        image:require("../../assets/Photos/typeChicken.jpg"),
     },
     {
-        name:"Biryani",
-        image:require("../../assets/Photos/food6.jpg"),
+        name:"Rolls",
+        image:require("../../assets/Photos/foodtype6.jpg"),
     },
     {
-        name:"Burger",
-        image:require("../../assets/Photos/food4.jpg"),
+        name:"Cake",
+        image:require("../../assets/Photos/typeCake.jpg"),
     },
     {
-        name:"mushroom",
+        name:"Noodels",
         image:require("../../assets/Photos/food5.jpg"),
+    },
+    {
+        name:"MushRooms",
+        image:require("../../assets/Photos/food2.jpg"),
+    },
+    {
+        name:"Pasta",
+        image:require("../../assets/Photos/typeRolls.jpg"),
     },
     {
         name:"checken",
         image:require("../../assets/Photos/food3.jpg"),
-    },
-    {
-        name:"rolls",
-        image:require("../../assets/Photos/food2.jpg"),
-    },
-    {
-        name:"cake",
-        image:require("../../assets/Photos/food1.jpg"),
     },
 
 ]
