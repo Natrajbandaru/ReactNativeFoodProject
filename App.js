@@ -4,16 +4,25 @@ import MainFirstRender from './src/Components/MainFirstRender';
 export default function App() {
   return (
     // <MainPage/>
-       <MainFirstRender/>
+
+      //  <MainFirstRender/>
     // <AppNavigator/>
+    <View style={styles.container}>
+    <Text style={styles.text}>Hello, world!</Text>
+  </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
-    // backgroundColor: '#fff',
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f0f0f0',
+  },
+  text: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#333',
   },
 });
