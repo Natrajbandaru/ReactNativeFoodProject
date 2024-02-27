@@ -60,7 +60,7 @@ export default ListOfResterentItems=[
       resturentName:"Adrin Party",
       rating:4.3,
       typeFoods:"Pure Veg . Rolls ",
-      timeTaken:"30-35 min . 4 km",
+      timeTaken:"30-36 min . 4 km",
       offer:"Flat 50 off above 199"
    },
 
