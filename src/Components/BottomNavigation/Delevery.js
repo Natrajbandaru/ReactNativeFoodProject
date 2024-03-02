@@ -13,7 +13,7 @@ export default Delevery=()=>{
                 <View style={styles.placeContainer}>
                        <Icon name="location-arrow" size={25} color="red" style={{marginLeft:"1%",marginRight:"2%"}}/>
                         <View style={styles.locationCon}>
-                            <Text style={styles.locationHead}>KAR Bhawan <Icon name="toggle-down" size={15}/></Text>
+                            <Text style={styles.locationHead}>KAR Bhawan  <Icon name="toggle-down" size={15}/></Text>
                             <Text style={styles.locationDesc}>Bhanu Prased Rava Flyover,Swaraj Nayak...</Text>
                         </View>
                         <View  style={styles.userCon}>
